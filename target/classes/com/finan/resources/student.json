@@ -1,0 +1,38 @@
+{
+  "StudentList" : [ {
+    "Name" : "Marshall Erikson",
+    "Class" : "10",
+    "Division" : "A",
+    "Id" : "101",
+    "Address" : "Vikhroli, 400079",
+    "Fee" : "5000000"
+  }, {
+    "Name" : "Lily Aldrin",
+    "Class" : "9",
+    "Division" : "B",
+    "Id" : "102",
+    "Address" : "Ghansoli,40070-1572",
+    "Fee" : "100000"
+  }, {
+    "Name" : "Joy Stinson",
+    "Class" : "8",
+    "Division" : "C",
+    "Id" : "103",
+    "Address" : "Thane,40008-0122",
+    "Fee" : "75000"
+  }, {
+    "Name" : "Ted Mosby",
+    "Class" : "4",
+    "Division" : "A",
+    "Id" : "104",
+    "Address" : "Airoli,34125",
+    "Fee" : "82000"
+  }, {
+    "Name" : "Nancy Wheeler",
+    "Class" : "5",
+    "Division" : "D",
+    "Id" : "105",
+    "Address" : "Nashik,29520-2335",
+    "Fee" : "52000"
+  } ]
+}
