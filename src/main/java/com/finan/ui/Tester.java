@@ -6,21 +6,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.DatabindException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.finan.entity.Format;
 import com.finan.entity.Student;
 import com.finan.entity.StudentList;
+import com.finan.myutil.Format;
 
 public class Tester {
 	
-	private static final String InputFilePath = "src\\main\\java\\com\\finan\\resources\\student.json";
-	private static final String OutputFilePath = "src\\main\\java\\com\\finan\\resources\\student.txt";
+	private static final Logger logger = LogManager.getLogger(Tester.class);
 	
+	private static final String InputFilePath = "src\\main\\java\\com\\finan\\resources\\student.json";
+	private static final String OutputFilePath = "src\\main\\java\\com\\finan\\ui\\student.txt";
+	
+	@SuppressWarnings("unused")
 	private static void prepJson() {
 		List<Student> students2 = new ArrayList<>();
 		//id, name, class, division, address, fee
@@ -37,13 +40,9 @@ public class Tester {
 
 		try {
 			mapper.writeValue(new File(InputFilePath), studentList);
-		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 	}
 	
 	private static List<Student> readStudents(){
@@ -54,15 +53,10 @@ public class Tester {
         
         try {
         	StudentList studentList = mapper.readValue(new File(InputFilePath), StudentList.class);
-        	System.out.println("-----");
-        	studentList.getStudents().forEach(System.out::println);
+        	studentList.getStudents().forEach(x->logger.info(x));
 			return studentList.getStudents();
-		} catch (StreamReadException e) {
-			e.printStackTrace();
-		} catch (DatabindException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);		
 		}
 		return null;
 	}
@@ -75,11 +69,11 @@ public class Tester {
 					fileWriter.write(Format.entityString(student));
 					fileWriter.write(System.lineSeparator());
 				} catch (IOException e) {
-					e.printStackTrace();
+					logger.error(e);
 				}
 			});
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 

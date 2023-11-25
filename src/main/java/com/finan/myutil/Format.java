@@ -1,6 +1,8 @@
-package com.finan.entity;
+package com.finan.myutil;
 
 import org.apache.commons.lang3.StringUtils;
+
+import com.finan.entity.Student;
 
 public class Format {
 	
@@ -17,7 +19,7 @@ public class Format {
     }
 
 	private static String formatAddress(String address) {
-		String[] splitStrings = StringUtils.split(address.replaceAll("[^a-zA-Z0-9,]", ""), ",");
+		String[] splitStrings = StringUtils.split(address.replaceAll("-", ""), ",");
 		String str = StringUtils.join(splitStrings, ",");
 		return str;
 	}

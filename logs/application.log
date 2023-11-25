@@ -1,0 +1,12 @@
+00:15:53.620 [main] INFO  com.finan.ui.Tester - Student [id=101, name=Marshall Erikson, classString=10, division=A, address=Vikhroli, 400079, fee=5000000]
+00:15:53.623 [main] INFO  com.finan.ui.Tester - Student [id=102, name=Lily Aldrin, classString=9, division=B, address=Ghansoli,40070-1572, fee=100000]
+00:15:53.623 [main] INFO  com.finan.ui.Tester - Student [id=103, name=Joy Stinson, classString=8, division=C, address=Thane,40008-0122, fee=75000]
+00:15:53.624 [main] INFO  com.finan.ui.Tester - Student [id=104, name=Ted Mosby, classString=4, division=A, address=Airoli,34125, fee=82000]
+00:15:53.624 [main] INFO  com.finan.ui.Tester - Student [id=105, name=Nancy Wheeler, classString=5, division=D, address=Nashik,29520-2335, fee=52000]
+00:15:53.625 [main] INFO  com.finan.ui.Tester - Woho
+00:20:00.297 [main] INFO  com.finan.ui.Tester - Student [id=101, name=Marshall Erikson, classString=10, division=A, address=Vikhroli, 400079, fee=5000000]
+00:20:00.299 [main] INFO  com.finan.ui.Tester - Student [id=102, name=Lily Aldrin, classString=9, division=B, address=Ghansoli,40070-1572, fee=100000]
+00:20:00.299 [main] INFO  com.finan.ui.Tester - Student [id=103, name=Joy Stinson, classString=8, division=C, address=Thane,40008-0122, fee=75000]
+00:20:00.300 [main] INFO  com.finan.ui.Tester - Student [id=104, name=Ted Mosby, classString=4, division=A, address=Airoli,34125, fee=82000]
+00:20:00.300 [main] INFO  com.finan.ui.Tester - Student [id=105, name=Nancy Wheeler, classString=5, division=D, address=Nashik,29520-2335, fee=52000]
+00:20:00.300 [main] ERROR com.finan.ui.Tester - java.io.IOException
